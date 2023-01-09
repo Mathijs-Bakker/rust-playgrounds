@@ -1,0 +1,1 @@
+/Users/MateoPanadero/Repositories/rust-playgrounds/rust-structs-and-traits/target/debug/rust-structs-and-traits: /Users/MateoPanadero/Repositories/rust-playgrounds/rust-structs-and-traits/src/i_am_not_main.rs /Users/MateoPanadero/Repositories/rust-playgrounds/rust-structs-and-traits/src/main.rs
