@@ -1,3 +1,5 @@
+use std::net::Ipv4Addr;
+
 // Write an algorithm that will identify valid IPv4 addresses in dot-decimal
 // format. IPs should be considered valid if they consist of four octets,
 // with values between 0 and 255, inclusive.
@@ -6,33 +8,7 @@ fn main() {
 }
 
 fn is_valid_ip(ip: &str) -> bool {
-    let tmp: Vec<&str> = ip.split('.').collect();
-
-    if tmp.len() != 4 {
-        return false;
-    }
-
-    let mut is_valid = false;
-
-    for s in tmp {
-        if s.len() > 1 && s.starts_with('0') {
-            is_valid = false;
-            break;
-        }
-
-        let n = s.parse::<u8>();
-
-        match n {
-            Ok(_) => is_valid = true,
-            Err(_) => is_valid = false,
-        };
-
-        if !is_valid {
-            break;
-        }
-    }
-
-    is_valid
+    ip.parse::<Ipv4Addr>().is_ok()
 }
 
 #[cfg(test)]
